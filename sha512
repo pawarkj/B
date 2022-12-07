@@ -1,0 +1,8 @@
+import hashlib
+m = hashlib.sha512()
+m.update(b"Message") #change message to what you want to encode
+#If you want to use a variable use the other version of m.update()
+variable = "Message"
+m.update(variable.encode("utf8"))
+hashedMessage = m.digest()
+print(hashedMessage)
